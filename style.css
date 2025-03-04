@@ -59,9 +59,21 @@ canvas {
     text-decoration: none;
     color: #000;
     font-size: 18px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
     font-weight: 500;
+}
+#center-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+}
+.dropdown2 a {
+    margin-left: 8px;
+}
+.dropdown .dropdown2{
+    margin-right: 15px;
 }
 #page>h1 {
     font-size: 80px;
@@ -351,11 +363,24 @@ canvas {
     height: auto;
 }
 .dropdown {
+    text-decoration: none;
     position: relative;
     display: inline-block;
+    font-weight: 500;
+    font-size: 18;
+    color: black;
+}
+.dropdown a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18;
+    color: black;
 }
 .dropdown-content {
     position: absolute;
+    text-decoration: none;
     left: 50%;
     transform: translateX(-50%);
     background: white;
@@ -373,15 +398,18 @@ canvas {
     transform: translate(-50%, 10px); 
 }
 .dropdown-column {
+    text-decoration: none;
     flex: 1;
     min-width: 180px;
 }
 .dropdown-column h4 {
+    text-decoration: none;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 .dropdown-column p {
+    text-decoration: none;
     font-size: 12px;
     color: gray;
     margin-bottom: 10px;
@@ -394,9 +422,11 @@ canvas {
     padding: 5px 0;
 }
 .dropdown-content a:hover {
+    text-decoration: none;
     color: #007bff;
 }
 .dropdown:hover .dropdown-content {
+    text-decoration: none;
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, 0px); 
@@ -413,6 +443,7 @@ canvas {
     background-color: #e6b342;
 }
 .resources-dropdown {
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
 }
@@ -430,6 +461,7 @@ canvas {
 }
 .resources-left a:hover {
     color: #007bff;
+    text-decoration: none;
 }
 .resources-right {
     flex: 2;
@@ -447,6 +479,7 @@ canvas {
 
 }
 .featured-item {
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -481,6 +514,7 @@ canvas {
     color: black;
 }
 .product-dropdown {
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
     gap: 30px;
