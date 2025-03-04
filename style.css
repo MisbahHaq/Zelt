@@ -20,6 +20,12 @@ canvas{
     height: 100vh;
     width: 100vw;
 }
+#nav{
+    position: fixed;
+    height: 10vh;
+    width: 10vw;
+    background-color: red;
+}
 #page1{
     height: 100vh;
     width: 100vw;
