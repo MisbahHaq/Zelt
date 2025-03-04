@@ -2,7 +2,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: montserrat,NoiGrotesk,sans-serif;
 }
 
 html,
@@ -149,15 +149,16 @@ canvas {
 }
 
 #page4>h1 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2.7vw;
 }
 
 #page4>h4 {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30;
     font-weight: 500;
-    color: #646464;
-    font-size: 1vw;
+    color: black;
+    font-size: 1.5vw;
 }
 
 #page5 {
@@ -166,16 +167,28 @@ canvas {
     width: 100vw;
     background-color: #fff;
 }
+#page5 .product {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 15%;
+    margin-top: 50px;
+    font-size: 2.5rem;
+}
+.product>h1{
+    font-family: montserrat, NoiGrotesk, sans-serif;
+    font-weight: normal;
+}
 
 #center-page5 {
     display: flex;
-
+    border-radius: 10px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 70%;
-    width: 75%;
+    height: 60%;
+    width: 65%;
     background-color: #F6F3EF;
 }
 
@@ -191,7 +204,7 @@ canvas {
 #right-page5 {
     display: flex;
     align-items: start;
-    gap: 30px;
+    gap: 15px;
     justify-content: center;
     flex-direction: column;
     height: 100%;
@@ -200,18 +213,32 @@ canvas {
 }
 
 #right-page5>h1 {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 3.9rem;
+}
+#why{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+}
+#why>h1{
+    font-weight: 500;
+    font-size: 5.9rem;
 }
 
 #right-page5>h4 {
     font-weight: 500;
     width: 70%;
-    color: #96969685;
+    color: black;
+    font-size: 1.3rem;
 }
 
 #right-page5>button {
     padding: 10px 20px;
     border: none;
+    margin-top: 20px;
     border-radius: 10px;
     background-color: #000;
     color: #fff;
@@ -220,9 +247,11 @@ canvas {
 #page6 {
     position: relative;
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    height: 50vh;
+    width: 90vw;
+    margin-top: 7%;
 }
+
 
 .left-page6 {
     display: flex;
@@ -232,6 +261,7 @@ canvas {
     height: 100%;
     width: 50%;
     padding-left: 10vw;
+    margin-left: 15%;
 }
 
 .left-page6>h1 {
@@ -243,22 +273,22 @@ canvas {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 500;
-    width: 50%;
+    width: 70%;
 }
 
 .right-page6 {
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 80%;
 }
 
 .right-page6>video {
     position: absolute;
-    left: 50%;
+    left: 70%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 70%;
-    width: 70%;
+    height: 100%;
+    width: 110%;
 }
 
 #page7 {
@@ -301,8 +331,8 @@ canvas {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 70%;
-    width: 70%;
+    height: 90%;
+    width: 110%;
 }
 
 #page8 {
@@ -318,43 +348,43 @@ canvas {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    width: 50%;
-    padding-left: 10vw;
+    width: 40%;
+    padding-left: 15vw;
 }
 
 .left-page8>h1 {
     font-size: 2.8vw;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .left-page8>h4 {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 500;
-    width: 50%;
+    width: 60%;
 }
 
 .right-page8 {
     position: relative;
-    height: 100%;
-    width: 50%;
+    height: 80%;
+    width: 40%;
 }
 
 .right-page8>img {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 60%;
+    top: 60%;
     transform: translate(-50%, -50%);
-    height: 70%;
-    width: 90%;
+    height: 60%;
+    width: 80%;
 }
 .image-container {
+    margin-top: 30px;
     display: flex;
     gap: 20px;
     justify-content: space-between;
     
 }
-
 .image-container img {
     max-width: 100%;
     height: auto;
