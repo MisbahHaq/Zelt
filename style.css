@@ -178,6 +178,7 @@ canvas {
 .product>h1{
     font-family: montserrat, NoiGrotesk, sans-serif;
     font-weight: normal;
+    margin-top: 80px;
 }
 #center-page5 {
     display: flex;
@@ -545,3 +546,48 @@ canvas {
 .product-column a:hover {
     color: #007bff;
 } 
+.modern{
+    height: 10vh;
+}
+.modern>h3{
+    margin-top: 30px;
+    margin-bottom: 30;
+    font-weight: normal;
+    color: black;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.slides {
+    display: flex;
+    animation: infiniteScroll 5s linear infinite;
+    gap: 150px;
+    /* Adjust gap between images */
+}
+
+.slides img {
+    width: 120px;
+    /* Adjust image width */
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Infinite scrolling animation */
+@keyframes infiniteScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
