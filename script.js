@@ -225,7 +225,6 @@ function scaleImage(img, ctx) {
 ScrollTrigger.create({
   trigger: "#page>canvas",
   pin: true,
-  // markers:true,
   scroller: `#main`,
   start: `top top`,
   end: `300% top`,
