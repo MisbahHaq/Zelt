@@ -477,7 +477,6 @@ canvas {
     font-size: 14px;
     font-weight: 500;
     color: gray;
-
 }
 .featured-item {
     text-decoration: none;
@@ -566,22 +565,16 @@ canvas {
     border-radius: 10px;
     white-space: nowrap;
 }
-
 .slides {
     display: flex;
     animation: infiniteScroll 5s linear infinite;
     gap: 150px;
-    /* Adjust gap between images */
 }
-
 .slides img {
     width: 120px;
-    /* Adjust image width */
     height: auto;
     flex-shrink: 0;
 }
-
-/* Infinite scrolling animation */
 @keyframes infiniteScroll {
     from {
         transform: translateX(0);
