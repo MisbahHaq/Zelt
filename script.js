@@ -246,61 +246,72 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const slider = document.querySelector(".reviews-wrapper");
+const sliderContainer = document.querySelector(".reviews-container"); // The container holding the slider items
+
 let isDown = false;
-let startX;
+let startX = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let animationID;
-let startPos;
+let isDragging = false;
 
+// Get X position (mouse or touch)
 const getPositionX = (event) => event.touches ? event.touches[0].clientX : event.clientX;
 
+// Animate slider movement
 const animation = () => {
     slider.style.transform = `translateX(${currentTranslate}px)`;
-    if (isDown) requestAnimationFrame(animation);
+    if (isDragging) requestAnimationFrame(animation);
 };
 
-slider.addEventListener("mousedown", (e) => {
+// Start dragging
+const startDrag = (e) => {
     isDown = true;
     startX = getPositionX(e);
-    startPos = startX - prevTranslate;
+    isDragging = true;
     animationID = requestAnimationFrame(animation);
-});
+};
 
-slider.addEventListener("mouseup", () => {
+// Stop dragging
+const endDrag = () => {
     isDown = false;
+    isDragging = false;
     cancelAnimationFrame(animationID);
     prevTranslate = currentTranslate;
-});
+};
 
-slider.addEventListener("mouseleave", () => {
-    isDown = false;
-    cancelAnimationFrame(animationID);
-    prevTranslate = currentTranslate;
-});
-
-slider.addEventListener("mousemove", (e) => {
+// Move slider
+const moveSlider = (e) => {
     if (!isDown) return;
+
     const currentPosition = getPositionX(e);
-    currentTranslate = prevTranslate + (currentPosition - startX);
-});
+    let movement = currentPosition - startX;
+    
+    currentTranslate = prevTranslate + movement;
 
-// Mobile touch support
-slider.addEventListener("touchstart", (e) => {
-    isDown = true;
-    startX = getPositionX(e);
-    startPos = startX - prevTranslate;
-    animationID = requestAnimationFrame(animation);
-});
+    // Lock the slider within limits
+    lockAtEdges();
+};
 
-slider.addEventListener("touchend", () => {
-    isDown = false;
-    cancelAnimationFrame(animationID);
-    prevTranslate = currentTranslate;
-});
+// Prevent dragging out of bounds
+const lockAtEdges = () => {
+    const maxTranslate = 0;
+    const minTranslate = -(slider.scrollWidth - sliderContainer.clientWidth); // Calculate max scrollable width
 
-slider.addEventListener("touchmove", (e) => {
-    if (!isDown) return;
-    const currentPosition = getPositionX(e);
-    currentTranslate = prevTranslate + (currentPosition - startX);
-});
+    if (currentTranslate > maxTranslate) {
+        currentTranslate = maxTranslate;
+    } else if (currentTranslate < minTranslate) {
+        currentTranslate = minTranslate;
+    }
+};
+
+// Desktop events
+slider.addEventListener("mousedown", startDrag);
+slider.addEventListener("mouseup", endDrag);
+slider.addEventListener("mouseleave", endDrag);
+slider.addEventListener("mousemove", moveSlider);
+
+// Mobile touch events
+slider.addEventListener("touchstart", startDrag);
+slider.addEventListener("touchend", endDrag);
+slider.addEventListener("touchmove", moveSlider);
