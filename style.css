@@ -651,3 +651,93 @@ canvas {
     font-size: 20px;
     margin-bottom: 20px;
 }
+#page10 {
+    position: relative;
+     background-color: #F6F3EF;
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+}
+.review-con {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    padding: 30px;
+    width: 270px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.left img {
+    width: 60px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.right {
+    text-align: left;
+}
+.right h1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+}
+.right h5 {
+    font-size: 10px;
+    font-weight: bold;
+    color: gray;
+    margin-top: 5px;
+}
+.bottom {
+    text-align: left;
+    margin-top: 10px;
+}
+.bottom h4 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.5;
+}
+.profile-pic img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.reviews-wrapper.dragging {
+    cursor: grabbing;
+    transition: none;
+}
+.reviews-container {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    cursor: grab;
+}
+.reviews-wrapper {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+.review-card {
+    width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}

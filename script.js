@@ -229,23 +229,78 @@ ScrollTrigger.create({
   start: `top top`,
   end: `300% top`,
 });
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const tiles = document.querySelectorAll(".cont");
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("visible"); // Add class when visible
+                entry.target.classList.add("visible"); 
             }
         });
-    }, { threshold: 0.3 }); // 30% of the tile must be visible to trigger
+    }, { threshold: 0.3 }); 
 
     tiles.forEach((tile) => {
         observer.observe(tile);
     });
+});
+
+const slider = document.querySelector(".reviews-wrapper");
+let isDown = false;
+let startX;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID;
+let startPos;
+
+const getPositionX = (event) => event.touches ? event.touches[0].clientX : event.clientX;
+
+const animation = () => {
+    slider.style.transform = `translateX(${currentTranslate}px)`;
+    if (isDown) requestAnimationFrame(animation);
+};
+
+slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = getPositionX(e);
+    startPos = startX - prevTranslate;
+    animationID = requestAnimationFrame(animation);
+});
+
+slider.addEventListener("mouseup", () => {
+    isDown = false;
+    cancelAnimationFrame(animationID);
+    prevTranslate = currentTranslate;
+});
+
+slider.addEventListener("mouseleave", () => {
+    isDown = false;
+    cancelAnimationFrame(animationID);
+    prevTranslate = currentTranslate;
+});
+
+slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    const currentPosition = getPositionX(e);
+    currentTranslate = prevTranslate + (currentPosition - startX);
+});
+
+// Mobile touch support
+slider.addEventListener("touchstart", (e) => {
+    isDown = true;
+    startX = getPositionX(e);
+    startPos = startX - prevTranslate;
+    animationID = requestAnimationFrame(animation);
+});
+
+slider.addEventListener("touchend", () => {
+    isDown = false;
+    cancelAnimationFrame(animationID);
+    prevTranslate = currentTranslate;
+});
+
+slider.addEventListener("touchmove", (e) => {
+    if (!isDown) return;
+    const currentPosition = getPositionX(e);
+    currentTranslate = prevTranslate + (currentPosition - startX);
 });
