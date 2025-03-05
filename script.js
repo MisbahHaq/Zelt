@@ -234,3 +234,18 @@ ScrollTrigger.create({
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const tiles = document.querySelectorAll(".cont");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); // Add class when visible
+            }
+        });
+    }, { threshold: 0.3 }); // 30% of the tile must be visible to trigger
+
+    tiles.forEach((tile) => {
+        observer.observe(tile);
+    });
+});
