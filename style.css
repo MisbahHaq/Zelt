@@ -655,13 +655,14 @@ canvas {
     position: relative;
      background-color: #F6F3EF;
     display: flex;
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
 }
 .review-con {
     background-color: #f9f9f9;
     border-radius: 10px;
     margin-left: 40px;
+    margin-top: 50px;
     margin-bottom: 20px;
     padding: 30px;
     width: 270px;
@@ -741,13 +742,70 @@ canvas {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     user-select: none;
 }
-.reviews-container .trust h1{
-    display: flex;
-    margin-top: 45px;
-    align-items: center;
-    justify-content: center;
+.page11 {
+    height: 900px;
 }
-.company img{
-    margin-left: 90px;
-    margin-top: 40px;
+.card {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    border-right: 1px solid #ddd;
+}
+.card:last-child {
+    border-right: none;
+}
+.icon {
+    display: block;
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.text {
+    color: #777;
+}
+.stars {
+    font-size: 18px;
+    color: black;
+}
+
+#page11 {
+    height: 600px;
+    /* Adjust as needed */
+    background-color: #f8f6f3;
+    /* Optional: Match the background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.trust {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.company img {
+    max-width: 120px;
+    /* Adjust the size of logos */
+    height: auto;
+}
+
+.trust-cont {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
