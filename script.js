@@ -280,7 +280,6 @@ const endDrag = () => {
     prevTranslate = currentTranslate;
 };
 
-// Move slider
 const moveSlider = (e) => {
     if (!isDown) return;
 
