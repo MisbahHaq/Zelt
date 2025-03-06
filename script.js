@@ -272,7 +272,6 @@ const startDrag = (e) => {
     animationID = requestAnimationFrame(animation);
 };
 
-// Stop dragging
 const endDrag = () => {
     isDown = false;
     isDragging = false;
