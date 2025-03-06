@@ -295,7 +295,7 @@ const moveSlider = (e) => {
 
 const lockAtEdges = () => {
     const maxTranslate = 0;
-    const minTranslate = -(slider.scrollWidth - sliderContainer.clientWidth); // Calculate max scrollable width
+    const minTranslate = -(slider.scrollWidth - sliderContainer.clientWidth); 
 
     if (currentTranslate > maxTranslate) {
         currentTranslate = maxTranslate;
