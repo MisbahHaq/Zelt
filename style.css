@@ -806,3 +806,98 @@ canvas {
     margin-bottom: 30px;
     font-weight: normal;
 }
+#pagelast {
+    margin-top: 50px;
+    position: relative;
+    background-color: #121718;
+    display: flex;
+    height: 60vh;
+    width: 100vw;
+}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 2.5rem;
+}
+.hero h1 {
+    margin-left: 70px;
+    font-weight: normal;
+    color: white;
+    align-self: flex-start;
+    text-align: start;
+}
+.cta-btn {
+    background-color: #ffc107;
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.footer {
+    background-color: #121718;
+    padding: 40px 20px;
+    width: 100%;
+    margin-top: auto;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo img {
+    height: 80px;
+    width: 80px;
+}
+.footer-logo h2 {
+    font-size: 24px;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+.footer-links h3 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    color: white;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 5px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-qr {
+    text-align: center;
+}
+.footer-qr img {
+    width: 80px;
+    height: 80px;
+}
+.footer-qr p {
+    margin-top: 5px;
+    font-size: 14px;
+}
