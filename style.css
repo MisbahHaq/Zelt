@@ -663,7 +663,7 @@ canvas {
     border-radius: 10px;
     margin-left: 40px;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 30px;
     width: 270px;
     height: 350px;
@@ -770,37 +770,30 @@ canvas {
     font-size: 18px;
     color: black;
 }
-
 #page11 {
     height: 600px;
-    /* Adjust as needed */
     background-color: #f8f6f3;
-    /* Optional: Match the background */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
-
 .trust {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .company {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 90px;
 }
-
 .company img {
     max-width: 120px;
-    /* Adjust the size of logos */
     height: auto;
+    margin-bottom: 50px;
 }
-
 .trust-cont {
     display: flex;
     gap: 20px;
@@ -808,4 +801,8 @@ canvas {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.trust h1 {
+    margin-bottom: 30px;
+    font-weight: normal;
 }
