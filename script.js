@@ -289,7 +289,6 @@ const moveSlider = (e) => {
     
     currentTranslate = prevTranslate + movement;
 
-    // Lock the slider within limits
     lockAtEdges();
 };
 
