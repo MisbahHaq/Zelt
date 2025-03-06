@@ -293,7 +293,6 @@ const moveSlider = (e) => {
     lockAtEdges();
 };
 
-// Prevent dragging out of bounds
 const lockAtEdges = () => {
     const maxTranslate = 0;
     const minTranslate = -(slider.scrollWidth - sliderContainer.clientWidth); // Calculate max scrollable width
@@ -305,13 +304,11 @@ const lockAtEdges = () => {
     }
 };
 
-// Desktop events
 slider.addEventListener("mousedown", startDrag);
 slider.addEventListener("mouseup", endDrag);
 slider.addEventListener("mouseleave", endDrag);
 slider.addEventListener("mousemove", moveSlider);
 
-// Mobile touch events
 slider.addEventListener("touchstart", startDrag);
 slider.addEventListener("touchend", endDrag);
 slider.addEventListener("touchmove", moveSlider);
