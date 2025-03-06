@@ -258,7 +258,6 @@ let isDragging = false;
 // Get X position (mouse or touch)
 const getPositionX = (event) => event.touches ? event.touches[0].clientX : event.clientX;
 
-// Animate slider movement
 const animation = () => {
     slider.style.transform = `translateX(${currentTranslate}px)`;
     if (isDragging) requestAnimationFrame(animation);
