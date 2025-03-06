@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const slider = document.querySelector(".reviews-wrapper");
-const sliderContainer = document.querySelector(".reviews-container"); // The container holding the slider items
+const sliderContainer = document.querySelector(".reviews-container"); 
 
 let isDown = false;
 let startX = 0;
