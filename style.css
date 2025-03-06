@@ -741,3 +741,9 @@ canvas {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     user-select: none;
 }
+.reviews-container .trust h1{
+    display: flex;
+    margin-top: 45px;
+    align-items: center;
+    justify-content: center;
+}
