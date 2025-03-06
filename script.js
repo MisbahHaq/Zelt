@@ -264,7 +264,6 @@ const animation = () => {
     if (isDragging) requestAnimationFrame(animation);
 };
 
-// Start dragging
 const startDrag = (e) => {
     isDown = true;
     startX = getPositionX(e);
