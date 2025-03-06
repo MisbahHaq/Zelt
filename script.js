@@ -255,7 +255,6 @@ let prevTranslate = 0;
 let animationID;
 let isDragging = false;
 
-// Get X position (mouse or touch)
 const getPositionX = (event) => event.touches ? event.touches[0].clientX : event.clientX;
 
 const animation = () => {
